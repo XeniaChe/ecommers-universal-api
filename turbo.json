@@ -1,0 +1,34 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDotEnv": ["./applications/ecommerce-backend/.env"],
+  "pipeline": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "dotEnv": ["./applications/ecommerce-backend/.env"]
+    },
+    "build:prod": {
+      "cache": true,
+      "dependsOn": ["^build:prod"],
+      "dotEnv": ["./applications/ecommerce-backend/.env"]
+    },
+    "deploy": {
+      "dependsOn": ["build", "test", "lint"]
+    },
+    "test": {
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
+    },
+    "test:watch": {
+      "cache": false
+    },
+    "test:e2e": {},
+    "lint": { "cache": false },
+    "start": {
+      "cache": false,
+      "dependsOn": ["build"]
+    },
+    "start:dev": {
+      "cache": false
+    }
+  }
+}

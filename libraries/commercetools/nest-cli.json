@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "customers": {
+      "type": "library",
+      "root": "./src",
+      "entryFile": "index",
+      "sourceRoot": "../../build/out-tsc/src",
+      "compilerOptions": {
+        "tsConfigPath": "./tsconfig.json",
+        "deleteOutDir": true,
+        "webpack": false
+      }
+    }
+  }
+}
