@@ -1,7 +1,7 @@
 {
   "name": "universal-api",
   "version": "1.0.0",
-  "main": "../../build/out-tsc/universal-api/src/app.module.js",
+  "main": "./src/app.module.ts",
   "types": "./src/app.module.ts",
   "scripts": {
     "build": "nest build",
