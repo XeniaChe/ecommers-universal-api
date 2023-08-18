@@ -5,20 +5,15 @@ import { TestLibService } from 'test-lib';
 @Injectable()
 export class UniversalApiService {
   ecommProvider;
+
   constructor(
-    @Inject('ECOMMERCE_PROVIDER_OPTIONS')
-    private opt: /*  Record<string, any> */ string,
-    private readonly commToolsService: CommercetoolsService,
-    private readonly testService: TestLibService
+    @Inject('EXTERNAL_SERVICE')
+    private service: CommercetoolsService | TestLibService
   ) {
-    this.ecommProvider = opt == 'commTools' ? commToolsService : testService;
+    this.ecommProvider = this.service;
   }
 
   getCustomers() {
     return this.ecommProvider.getCustomers();
   }
-
-  /*  getHello(): string {
-    return 'Hello World!';
-  } */
 }

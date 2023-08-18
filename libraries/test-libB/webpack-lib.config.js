@@ -14,7 +14,10 @@ module.exports = function (options, webpack) {
     entry: ['webpack/hot/poll?100', './src/index.ts'],
     output: {
       library: { type: 'commonjs' },
-      path: path.join(__dirname, '../../build/out-tsc/src'),
+      path: path.join(
+        __dirname,
+        '../../build/out-tsc/ecommerce-libs/testLib/src'
+      ),
       filename: 'index.js',
     },
     optimization: {

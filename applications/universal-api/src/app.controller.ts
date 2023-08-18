@@ -5,8 +5,8 @@ import { UniversalApiService } from './app.service';
 export class AppController {
   constructor(private readonly appService: UniversalApiService) {}
 
-  @Get('customers')
-  getCustomers() {
+  @Get()
+  getHello() {
     return this.appService.getCustomers();
   }
 }

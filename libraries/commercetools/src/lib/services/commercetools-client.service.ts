@@ -19,8 +19,13 @@ export class CommercetoolsClientService {
   constructor(private readonly config: ConfigService) {
     this.#projectKey = config.get<string>('CTP_PROJECT_KEY')!;
     this.#apiRoot = this.#getApiRoot();
-  }
 
+    // TODO: delete when finished
+    this.#testPrint();
+  }
+  #testPrint() {
+    console.log('COMMERCETOOLS loaded');
+  }
   customers() {
     return this.#apiRoot
       .withProjectKey({ projectKey: this.#projectKey })

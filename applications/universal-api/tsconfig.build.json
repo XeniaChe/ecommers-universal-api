@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "composite": true,
-    "outDir": "../../build/out-tsc/"
+    "outDir": "../../build/out-tsc/universal-api"
   },
   "extends": "./tsconfig.json",
   "exclude": ["node_modules", "test", "build"]

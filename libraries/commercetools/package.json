@@ -1,7 +1,7 @@
 {
   "name": "commercetools",
   "version": "1.0.0",
-  "main": "../../build/out-tsc/src/index.js",
+  "main": "../../build/out-tsc/ecommerce-libs/commTools/src/index.js",
   "types": "./src/index.ts",
   "scripts": {
     "build": "nest build",
