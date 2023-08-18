@@ -1,8 +1,8 @@
 {
   "name": "universal-api",
   "version": "1.0.0",
-  "main": "./src/app.module.ts",
-  "types": "./src/app.module.ts",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "scripts": {
     "build": "nest build",
     "build:prod": "nest build --webpack --webpackPath ./webpack-lib.config.js",
